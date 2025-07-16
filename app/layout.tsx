@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Footer } from './components/Footer';
 // googleフォント読み込み用、後で考える
 import { Geist, Geist_Mono } from "next/font/google";
 
@@ -13,11 +14,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "タシカニ市場",
-  description: "活きのいいカニ揃ってるよ〜！",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,8 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="bg-white">
-        <main>{children}</main>
+      <body className="flex flex-col min-h-screen">
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
