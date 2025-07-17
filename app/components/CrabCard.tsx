@@ -25,18 +25,18 @@ export const CrabCard = ({ id, description }: CrabCardProps) => {
   };
 
   return (
-    <div className="card shadow-xl bg-base-100">
+    <div className="card shadow-lg bg-base-100">
       <figure>
         <Image
           src={imagePath}
           alt="タシカニ市場"
-          width={500}
+          width={800}
           height={300}
           className="mx-auto"
         />
       </figure>
       <div className="card-body">
-        <p className="text-sm mb-2">{description}</p>
+        <p className="text-sm md:text-base mb-2 text-left">{description}</p>
         <div className="card-actions justify-end flex-row items-center gap-2">
           <a
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(

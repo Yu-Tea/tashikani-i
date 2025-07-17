@@ -1,17 +1,62 @@
 export const crabData = [
   {
-    id: '01',
-    description: 'サンプルテキスト1サンプルテキスト1サンプルテキスト1',
-    isTashikani: true,
-  },
-  {
-    id: '02',
-    description: 'サンプルテキストサンプルテキストサンプルテキスト2',
+    id: "01",
+    description: "今日も元気にカニッ☆ピースでいこう！",
     isTashikani: false,
   },
   {
-    id: '03',
-    description: 'サンプルテキストサンプルテキストサンプル3',
+    id: "02",
+    description: "「夜風が囁く…『挟め』とな」",
+    isTashikani: false,
+  },
+  {
+    id: "03",
+    description: "カニも納得。この輝き、まさにLGTM。",
+    isTashikani: false,
+  },
+  {
+    id: "04",
+    description: "タシカニモドキもいるらしい。でもカニなら当市場で取り扱います。",
     isTashikani: true,
-  }
-]
+  },
+  {
+    id: "05",
+    description: "プロレタリア文学の名作とは特に関係はございません。",
+    isTashikani: true,
+  },
+  {
+    id: "06",
+    description: "背後に壮大な宇宙を感じたときにどうぞ。",
+    isTashikani: true,
+  },
+  {
+    id: "07",
+    description: "全く最高だぜ。だから俺はこう言ってやったのさ。",
+    isTashikani: true,
+  },
+  {
+    id: "08",
+    description: "睡眠は大事！エラーも一晩寝かせたら治る！！",
+    isTashikani: false,
+  },
+  {
+    id: "09",
+    description: "おはよう！横歩きでも、前向きにいこう。",
+    isTashikani: false,
+  },
+  {
+    id: "10",
+    description: "No need for a reason. Just Tashikani.",
+    isTashikani: true,
+  },
+  {
+    id: "11",
+    description: "分かるで〜。それはホンマ確かにそうやわ〜。え？いや知らんけど。",
+    isTashikani: true,
+  },
+  {
+    id: "12",
+    description: "カニが力説する『確かに！』の重み。シンプルイズベスト。",
+    isTashikani: true,
+  },
+];

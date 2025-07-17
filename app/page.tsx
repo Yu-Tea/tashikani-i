@@ -1,4 +1,5 @@
 import CrabList from "./components/CrabList";
+import ScrollCrab from "./components/ScrollCrab";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -29,23 +30,13 @@ export const metadata: Metadata = {
 // TOPページのデザイン部分
 export default function Home() {
   return (
-    <div className="container mx-auto px-8 py-15">
-      <div className="text-center mb-15">
-        <Image
-          src="/kani.png"
-          alt="タシカニ"
-          width={100}
-          height={100}
-          className="mx-auto"
-        />
-        <Image
-          src="/logo.png"
-          alt="タシカニ市場"
-          width={400}
-          height={70}
-          className="mx-auto mb-6"
-        />
-        <p>へいらっしゃい！活きのいいカニ揃えてるよ〜！</p>
+    <div>
+      <div className="mb-15">
+        <p>
+          へいらっしゃい！
+          <br className="block sm:hidden" />
+          活きのいいカニ揃えてるよ〜！
+        </p>
         <p>称賛・共感・ボケ・ツッコミなどにカニで彩りを添えよう！</p>
         <p>
           具体的な使い方はこちらの
@@ -90,7 +81,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      <ScrollCrab />
       <CrabList />
     </div>
   );
