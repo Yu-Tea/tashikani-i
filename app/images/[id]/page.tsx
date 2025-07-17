@@ -1,5 +1,6 @@
 import { crabData } from "../../data/info";
 import Image from "next/image";
+import Link from 'next/link';
 
 // カニ番号で静的ページ生成用のパラメータを作成
 export async function generateStaticParams() {
