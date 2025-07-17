@@ -42,8 +42,14 @@ export async function generateMetadata({
   };
 }
 
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
 // ページのデザイン
-export default async function CrabPage({ params }: { params: { id: string } }) {
+export default async function CrabPage({ params }: PageProps) {
   const crab = crabData.find((kani) => kani.id === params.id);
   if (!crab) return notFound();
 
