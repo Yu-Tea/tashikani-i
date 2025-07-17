@@ -1,6 +1,7 @@
 import { crabData } from "../../data/info";
 import Image from "next/image";
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 // カニ番号で静的ページ生成用のパラメータを作成
 export async function generateStaticParams() {
@@ -42,14 +43,8 @@ export async function generateMetadata({
   };
 }
 
-type PageProps = {
-  params: {
-    id: string;
-  };
-};
-
 // ページのデザイン
-export default async function CrabPage({ params }: PageProps) {
+export default async function CrabPage({ params }: { params: { id: string } }) {
   const crab = crabData.find((kani) => kani.id === params.id);
   if (!crab) return notFound();
 

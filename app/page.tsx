@@ -1,6 +1,5 @@
 import CrabList from "./components/CrabList";
 import ScrollCrab from "./components/ScrollCrab";
-import Image from "next/image";
 import type { Metadata } from "next";
 
 // TOPページのMetaタグ情報
