@@ -48,15 +48,15 @@ export default async function CrabPage({ params }: { params: { id: string } }) {
 
   const imagePath = `/ogp/kani${crab.id}.png`;
   return (
-    <div className="container mx-auto px-5 py-20 text-center">
+    <div>
       <Image
         src={imagePath}
         alt="タシカニ市場"
         width={800}
         height={400}
-        className="rounded shadow mx-auto mb-12"
+        className="rounded mx-auto my-10"
       />
-      <p className="mt-4 text-gray-600">{crab.description}</p>
+      <p className="mt-4 text-gray-600 text-left sm:text-center">{crab.description}</p>
       <a href="/" className="btn btn-outline btn-neutral mt-10">
         タシカニ市場へGO！
       </a>

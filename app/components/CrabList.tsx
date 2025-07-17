@@ -11,15 +11,10 @@ const sortedKani = [...crabData].sort(
 );
 
 export default function CrabList() {
-  const [filter, setFilter] = useState<"all" | "tashikani" | "notTashikani">(
-    "all"
-  );
+  const [filter, setFilter] = useState<FilterType>("all");
 
-  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    if (value === "tashikani" || value === "notTashikani" || value === "all") {
-      setFilter(value);
-    }
+  const handleFilterClick = (type: FilterType) => {
+    setFilter((prev) => (prev === type ? "all" : type));
   };
 
   const filteredKani = sortedKani.filter((kani) => {
@@ -32,34 +27,28 @@ export default function CrabList() {
     <div>
       {/* カニカードの絞り込みボタン */}
       <div className="text-center mx-auto">
-        <form className="filter flex flex-row justify-center items-center gap-1.5">
+        <div className="flex flex-row justify-center items-center gap-1.5">
           <p className="text-sm font-bold text-gray-600">画像絞り込み▶</p>
-          {/* 全表示 */}
-          <input
-            type="reset"
-            className="btn btn-square btn-soft"
-            value="×"
-          />
-
-          {/* タシカニだけ */}
-          <input
-            type="radio"
-            name="frameworks"
-            className="btn btn-soft btn-primary"
-            aria-label="タシカニ"
-          />
-
-          {/* Notタシカニ */}
-          <input
-            type="radio"
-            name="frameworks"
-            className="btn btn-soft btn-accent"
-            aria-label="Notタシカニ"
-          />
-        </form>
+          <button
+            onClick={() => handleFilterClick("tashikani")}
+            className={`btn btn-primary ${
+              filter === "tashikani" ? "" : "btn-soft"
+            }`}
+          >
+            タシカニ
+          </button>
+          <button
+            onClick={() => handleFilterClick("notTashikani")}
+            className={`btn btn-accent ${
+              filter === "notTashikani" ? "" : "btn-soft"
+            }`}
+          >
+            Notタシカニ
+          </button>
+        </div>
       </div>
       {/* カニカード */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12 mt-8">
         {filteredKani.map((kani) => (
           <CrabCard
             key={kani.id}
