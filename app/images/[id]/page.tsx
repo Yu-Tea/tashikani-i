@@ -57,9 +57,9 @@ export default async function CrabPage({ params }: { params: { id: string } }) {
         className="rounded mx-auto my-10"
       />
       <p className="mt-4 text-gray-600 text-left sm:text-center">{crab.description}</p>
-      <a href="/" className="btn btn-outline btn-neutral mt-10">
+      <Link href="/" className="btn btn-outline btn-neutral mt-10">
         タシカニ市場へGO！
-      </a>
+      </Link>
     </div>
   );
 }
