@@ -21,6 +21,9 @@ export default function ScrollCrab() {
       const tiltAngle = Math.sin(scrollTop / 2) * 10;
       setTilt(tiltAngle);
     };
+    // クリック時のカニ画像を先に読み込み
+    const preloadImage = new window.Image();
+    preloadImage.src = "/sc-kani02.png";
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
