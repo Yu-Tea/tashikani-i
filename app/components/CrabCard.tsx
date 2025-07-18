@@ -43,6 +43,8 @@ export const CrabCard = ({ id, description }: CrabCardProps) => {
               tweetText
             )}%0A${encodeURIComponent(pageUrl)}`}
             className="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Xに投稿
           </a>

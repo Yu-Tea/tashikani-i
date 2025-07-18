@@ -2,6 +2,7 @@ import { crabData } from "../../data/info";
 import Image from "next/image";
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import type { PageProps } from 'next';
 
 // カニ番号で静的ページ生成用のパラメータを作成
 export async function generateStaticParams() {
@@ -44,7 +45,7 @@ export async function generateMetadata({
 }
 
 // ページのデザイン
-export default async function CrabPage({ params }: { params: { id: string } }) {
+export default async function CrabPage({ params }: PageProps) {
   const crab = crabData.find((kani) => kani.id === params.id);
   if (!crab) return notFound();
 
@@ -54,12 +55,12 @@ export default async function CrabPage({ params }: { params: { id: string } }) {
       <Image
         src={imagePath}
         alt="タシカニ市場"
-        width={800}
+        width={700}
         height={400}
         className="rounded mx-auto my-10"
       />
-      <p className="mt-4 text-gray-600 text-left sm:text-center">{crab.description}</p>
-      <Link href="/" className="btn btn-outline btn-neutral mt-10">
+      <p className="mt-1 sm:mt-4 text-gray-600 text-left sm:text-center">{crab.description}</p>
+      <Link href="/" className="btn btn-outline btn-neutral mt-5 sm:mt-10">
         タシカニ市場へGO！
       </Link>
     </div>

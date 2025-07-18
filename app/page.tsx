@@ -36,7 +36,7 @@ export default function Home() {
           <br className="block sm:hidden" />
           活きのいいカニ揃えてるよ〜！
         </p>
-        <p>称賛・共感・ボケ・ツッコミなどにカニで彩りを添えよう！</p>
+        <p>称賛・共感・ボケ・ツッコミ…様々な場面でカニが貴方に寄り添います。</p>
         <p>
           具体的な使い方はこちらの
           <label
@@ -52,25 +52,25 @@ export default function Home() {
         <input type="checkbox" id="howto-modal" className="modal-toggle" />
         <div className="modal">
           <div className="modal-box max-w-2xl text-left">
-            <h3 className="font-bold text-lg">🦀 サイトの使い方</h3>
+            <h3 className="font-bold text-lg">🦀 タシカニ市場とは</h3>
             <p className="py-2">
-              このサイトでは、カニの画像を
-              <strong>スタンプのように使って楽しめる</strong>ようにしています。
-              画像は<strong>X（旧Twitter）への投稿</strong>や、
-              <strong>DiscordなどOGP画像が表示されるチャット欄</strong>
-              で使うことができます。
+              当市場では、
+              <strong>スタンプのように使用</strong>できる様々なカニの画像をご用意しています。
+              <strong>Xへの投稿</strong>や、
+              <strong>OGP画像が表示される場（Discordのチャット欄など）</strong>
+              で該当するURLを貼り付けることで画像を表示できます。
             </p>
-            <h4 className="font-semibold mt-4">📤 「Xに投稿」ボタンについて</h4>
+            <h4 className="font-semibold mt-4">📮「Xに投稿」ボタンについて</h4>
             <p className="py-2">
-              ボタンを押すとXに投稿する画面が開きます。投稿文にある
-              「※ここに投稿文を書いてね🦀」のダミーを削除して、自分のメッセージを書いてください。
+              Xに投稿する画面が開きます。
+              「※ここに投稿文を書いてね🦀」というダミー文を削除して、Xに投稿したいメッセージに書き換えてください。
             </p>
             <h4 className="font-semibold mt-4">
-              📋 「URLをコピー」ボタンについて
+              📌「URLをコピー」ボタンについて
             </h4>
             <p className="py-2">
-              ボタンを押すと、画像ページのURLがコピーされます。
-              Xの返信やDiscordなどで貼りたいときに使ってください。貼るとOGP画像として表示されます。
+              該当する画像を表示するためのURLがコピーできます。
+              Xの返信メッセージやDiscordのチャット欄などにコピーしたURLを貼ると、画像が表示されます。
             </p>
             <div className="modal-action">
               <label htmlFor="howto-modal" className="btn btn-outline btn-info">

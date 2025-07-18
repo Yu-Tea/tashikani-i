@@ -16,7 +16,7 @@ export const crabData = [
   },
   {
     id: "04",
-    description: "タシカニモドキもいるらしい。でもカニなら当市場で取り扱います。",
+    description: "タシカニモドキもいるらしい。でもカニなら何でも当市場で取り扱います。",
     isTashikani: true,
   },
   {

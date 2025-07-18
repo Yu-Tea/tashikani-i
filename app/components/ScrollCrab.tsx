@@ -15,7 +15,7 @@ export default function ScrollCrab() {
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = docHeight ? scrollTop / docHeight : 0;
-      setScrollX(scrollPercent * (100 - 5)); // 引いてる数値はカニ画像分の幅、はみ出さないよう調整した分
+      setScrollX(scrollPercent * (100 - 6)); // 引いてる数値はカニ画像分の幅、はみ出さないよう調整した分
 
       // カニが歩くときに左右に傾く調整
       const tiltAngle = Math.sin(scrollTop / 2) * 10;
