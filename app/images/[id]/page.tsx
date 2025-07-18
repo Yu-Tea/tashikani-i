@@ -46,10 +46,10 @@ export async function generateMetadata({
 }
 
 // ページのデザイン
-export default async function CrabPage({ 
-  params 
-}: { 
-  params: Promise<{ id: string }>
+export default async function CrabPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
   const crab = crabData.find((kani) => kani.id === id);
@@ -57,7 +57,7 @@ export default async function CrabPage({
 
   const imagePath = `/ogp/kani${crab.id}.png`;
   return (
-    <div>
+    <>
       <Image
         src={imagePath}
         alt="タシカニ市場"
@@ -71,6 +71,6 @@ export default async function CrabPage({
       <Link href="/" className="btn btn-outline btn-neutral mt-5 sm:mt-10">
         タシカニ市場へGO！
       </Link>
-    </div>
+    </>
   );
 }
