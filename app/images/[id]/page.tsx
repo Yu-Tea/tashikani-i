@@ -2,7 +2,7 @@ import { crabData } from "../../data/info";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import type { PageProps } from "next";
+import { Metadata } from "next";
 
 // カニ番号で静的ページ生成用のパラメータを作成
 export async function generateStaticParams() {
@@ -13,9 +13,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const crab = crabData.find((kani) => kani.id === params.id);
+  const { id } = await params;
+  const crab = crabData.find((kani) => kani.id === id);
   if (!crab) return {};
 
   const baseUrl = "https://tashikani-i.vercel.app";
@@ -23,9 +24,9 @@ export async function generateMetadata({
   const pageUrl = `${baseUrl}/images/${crab.id}`;
 
   return {
-    title: `タシカニ市場`,
+    title: "タシカニ市場",
     openGraph: {
-      title: `タシカニ市場`,
+      title: "タシカニ市場",
       url: pageUrl,
       images: [
         {
@@ -38,15 +39,20 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `タシカニ市場`,
+      title: "タシカニ市場",
       images: [imageUrl],
     },
   };
 }
 
 // ページのデザイン
-export default async function CrabPage({ params }: { params: { id: string } }) {
-  const crab = crabData.find((kani) => kani.id === params.id);
+export default async function CrabPage({ 
+  params 
+}: { 
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params;
+  const crab = crabData.find((kani) => kani.id === id);
   if (!crab) return notFound();
 
   const imagePath = `/ogp/kani${crab.id}.png`;
