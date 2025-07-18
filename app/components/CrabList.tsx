@@ -56,7 +56,6 @@ export default function CrabList() {
           <CrabCard
             key={kani.id}
             id={kani.id}
-            image={kani.image}
             description={kani.description}
           />
         ))}
