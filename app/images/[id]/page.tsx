@@ -65,7 +65,7 @@ export default async function CrabPage({
         height={400}
         className="rounded mx-auto my-10"
       />
-      <p className="mt-1 sm:mt-4 text-gray-600 text-left sm:text-center">
+      <p className="mt-1 sm:mt-4 text-gray-700 text-left sm:text-center">
         {crab.description}
       </p>
       <Link href="/" className="btn btn-outline btn-neutral mt-5 sm:mt-10">

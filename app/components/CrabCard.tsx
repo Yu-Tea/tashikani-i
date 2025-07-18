@@ -36,7 +36,7 @@ export const CrabCard = ({ id, description }: CrabCardProps) => {
         />
       </figure>
       <div className="card-body">
-        <p className="text-sm md:text-base mb-2 text-left">{description}</p>
+        <p className="text-sm md:text-base mb-2 text-left text-gray-800">{description}</p>
         <div className="card-actions justify-end flex-row items-center gap-2">
           <a
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
