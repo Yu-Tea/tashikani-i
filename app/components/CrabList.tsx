@@ -5,6 +5,9 @@ import { useState } from "react";
 import { crabData } from "../data/info";
 import { CrabCard } from "./CrabCard";
 
+// FilterTypeを定義
+type FilterType = "all" | "tashikani" | "notTashikani";
+
 // カニカードを降順で並び替え
 const sortedKani = [...crabData].sort(
   (a, b) => parseInt(b.id) - parseInt(a.id)
