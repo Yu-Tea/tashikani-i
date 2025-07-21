@@ -51,7 +51,7 @@ export default function CrabList() {
         </div>
       </div>
       {/* カニカード */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-8 mt-8">
         {filteredKani.map((kani) => (
           <CrabCard
             key={kani.id}

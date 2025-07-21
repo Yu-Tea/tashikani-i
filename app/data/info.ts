@@ -59,4 +59,19 @@ export const crabData = [
     description: "カニが力説する『確かに！』の重み。シンプルイズベスト。",
     isTashikani: true,
   },
+  {
+    id: "13",
+    description: "あまりにも 絵になりそうな 魅力的な カニと ハッピービーチ",
+    isTashikani: false,
+  },
+  {
+    id: "14",
+    description: "カニを食べるとね、人類は無言になるからね。",
+    isTashikani: false,
+  },
+  {
+    id: "15",
+    description: "カニカニ！横歩きで爆走しようぜ！！",
+    isTashikani: false,
+  },
 ];
