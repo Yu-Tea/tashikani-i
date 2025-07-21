@@ -27,6 +27,7 @@ export async function generateMetadata({
     title: "タシカニ市場",
     openGraph: {
       title: "タシカニ市場",
+      description: crab.description,
       url: pageUrl,
       images: [
         {
@@ -40,6 +41,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: "タシカニ市場",
+      description: crab.description,
       images: [imageUrl],
     },
   };
