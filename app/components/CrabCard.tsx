@@ -36,19 +36,23 @@ export const CrabCard = ({ id, description }: CrabCardProps) => {
         />
       </figure>
       <div className="card-body">
-        <p className="text-sm md:text-base mb-2 text-left text-gray-800">{description}</p>
+        {/* NEWボタンの配置はここ！新規画像のidに合わせて数値を変更させる */}
+        {Number(id) >= 13 && <div className="badge badge-secondary">NEW</div>}
+        <p className="text-sm md:text-base mb-2 text-left text-gray-800">
+          {description}
+        </p>
         <div className="card-actions justify-end flex-row items-center gap-2">
           <a
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
               tweetText
             )}%0A${encodeURIComponent(pageUrl)}`}
-            className="btn btn-primary"
+            className="btn btn-primary md:btn-sm"
             target="_blank"
             rel="noopener noreferrer"
           >
             Xに投稿
           </a>
-          <button className="btn btn-accent" onClick={handleCopy}>
+          <button className="btn btn-accent md:btn-sm" onClick={handleCopy}>
             {copied ? "コピー完了！" : "URLをコピー"}
           </button>
         </div>

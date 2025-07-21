@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="flex flex-col min-h-screen">
-        <main className="flex-grow container mx-auto px-6 xl:px-20 py-8 lg:py-15 text-center">
+        <main className="flex-grow container mx-auto px-6 xl:px-15 py-8 sm:py-15 text-center">
           <Title />
           {children}
         </main>
