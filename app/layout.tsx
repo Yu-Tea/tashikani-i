@@ -1,6 +1,6 @@
 import "./globals.css";
-import { Title } from "./components/Title";
-import { Footer } from "./components/Footer";
+import { Title } from "@/components/ui/Title";
+import { Footer } from "@/components/ui/Footer";
 
 export default function RootLayout({
   children,

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { crabData } from "../data/info";
-import { CrabCard } from "./CrabCard";
+import { crabData } from "@/data/info";
+import { CrabCard } from "@/components/features/CrabCard";
 
 // FilterTypeを定義
 type FilterType = "all" | "tashikani" | "notTashikani";
@@ -53,11 +53,7 @@ export default function CrabList() {
       {/* カニカード */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-8 mt-8">
         {filteredKani.map((kani) => (
-          <CrabCard
-            key={kani.id}
-            id={kani.id}
-            description={kani.description}
-          />
+          <CrabCard key={kani.id} id={kani.id} description={kani.description} />
         ))}
       </div>
     </div>

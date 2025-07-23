@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function ScrollCrab() {
   const [scrollX, setScrollX] = useState(1);
   const [tilt, setTilt] = useState(0);
-  const [hovered, setHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const [imageSrc, setImageSrc] = useState("/sc-kani01.png");
 
   useEffect(() => {
@@ -31,14 +31,14 @@ export default function ScrollCrab() {
 
   // クリックでジャンプ＆画像変更の設定
   const handleClick = () => {
-    setHovered(true);
+    setIsClicked(true);
     setImageSrc("/sc-kani02.png");
     setTimeout(() => {
-      setHovered(false);
+      setIsClicked(false);
       setImageSrc("/sc-kani01.png");
     }, 250);
   };
-  const jumpOffset = hovered ? -30 : 0;
+  const jumpOffset = isClicked ? -30 : 0;
 
   const style = {
     transform: `translateX(${scrollX}vw) translateY(${jumpOffset}px) rotate(${tilt}deg)`,

@@ -1,8 +1,6 @@
-import CrabList from "./components/CrabList";
-import ScrollCrab from "./components/ScrollCrab";
-import LoadingCircle from "./components/Loading";
+import CrabList from "@/components/features/CrabList";
+import ScrollCrab from "@/components/features/ScrollCrab";
 import type { Metadata } from "next";
-import { Suspense } from "react";
 
 // TOPページのMetaタグ情報
 export const metadata: Metadata = {
@@ -30,17 +28,6 @@ export const metadata: Metadata = {
 
 // TOPページのデザイン部分
 export default function Home() {
-  return (
-    <Suspense fallback={<LoadingCircle />}>
-      <DelayedContent />
-    </Suspense>
-  );
-}
-
-// Loading画面用の設定
-async function DelayedContent() {
-  await new Promise((resolve) => setTimeout(resolve, 1500));
-
   return (
     <div className="animate-fadeIn">
       <div className="mb-10 text-gray-800">
