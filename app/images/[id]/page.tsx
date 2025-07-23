@@ -1,4 +1,4 @@
-import { crabData } from "../../data/info";
+import { crabData } from "@/data/info";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
