@@ -10,16 +10,27 @@ export default function ScrollCrab() {
   const [imageSrc, setImageSrc] = useState("/sc-kani01.png");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = docHeight ? scrollTop / docHeight : 0;
-      setScrollX(scrollPercent * (100 - 6)); // 引いてる数値はカニ画像分の幅、はみ出さないよう調整した分
+    let ticking = false;
 
-      // カニが歩くときに左右に傾く調整
-      const tiltAngle = Math.sin(scrollTop / 2) * 10;
-      setTilt(tiltAngle);
+    const handleScroll = () => {
+      if (!ticking) {
+        // ブラウザの次の描画タイミングで実行予約（※ディスプレイのリフレッシュレート（通常60fps）に合わせて実行されるイメージ）
+        requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          const docHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+          const scrollPercent = docHeight ? scrollTop / docHeight : 0;
+          setScrollX(scrollPercent * (100 - 6)); // 引いてる数値はカニ画像分の幅、はみ出さないよう調整した分
+
+          // カニが歩くときに左右に傾く調整
+          const tiltAngle = Math.sin(scrollTop / 2) * 10;
+          setTilt(tiltAngle);
+          // 処理完了、次の処理を受け付け可能に
+          ticking = false;
+        });
+        // 処理予約完了フラグを立てる
+        ticking = true;
+      }
     };
     // クリック時のカニ画像を先に読み込み
     const preloadImage = new window.Image();
@@ -56,6 +67,7 @@ export default function ScrollCrab() {
         src={imageSrc}
         alt="タシカニ!!"
         fill
+        sizes="64px"
         className="object-contain pointer-events-auto"
       />
     </div>
