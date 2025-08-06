@@ -7,7 +7,9 @@ type CrabCardProps = {
   crab: CrabData;
 };
 
-export const CrabCard = ({ id, description }: CrabCardProps) => {
+export const CrabCard = ({ crab }: CrabCardProps) => {
+  const { id, description, isTashikani } = crab;
+  
   const imagePath = `/ogp/kani${id}.png`;
   const pageUrl = `https://tashikani-i.vercel.app/images/${id}`;
   const tweetText = `※ここに投稿文を書いてね🦀`;
