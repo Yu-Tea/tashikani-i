@@ -1,13 +1,15 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import type { CrabData } from "@/types/crab";
 
 type CrabCardProps = {
-  id: string;
-  description: string;
+  crab: CrabData;
 };
 
-export const CrabCard = ({ id, description }: CrabCardProps) => {
+export const CrabCard = ({ crab }: CrabCardProps) => {
+  const { id, description, isTashikani } = crab;
+  
   const imagePath = `/ogp/kani${id}.png`;
   const pageUrl = `https://tashikani-i.vercel.app/images/${id}`;
   const tweetText = `※ここに投稿文を書いてね🦀`;

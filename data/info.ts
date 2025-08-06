@@ -1,4 +1,6 @@
-export const crabData = [
+import type { CrabData } from "@/types/crab";
+
+export const crabData: CrabData[] = [
   {
     id: "01",
     description: "今日も元気にカニッ☆ピースでいこう！",
@@ -16,7 +18,8 @@ export const crabData = [
   },
   {
     id: "04",
-    description: "タシカニモドキもいるらしい。でもカニなら何でも当市場で取り扱います。",
+    description:
+      "タシカニモドキもいるらしい。でもカニなら何でも当市場で取り扱います。",
     isTashikani: true,
   },
   {
@@ -51,7 +54,8 @@ export const crabData = [
   },
   {
     id: "11",
-    description: "分かるで〜。それはホンマ確かにそうやわ〜。え？いや知らんけど。",
+    description:
+      "分かるで〜。それはホンマ確かにそうやわ〜。え？いや知らんけど。",
     isTashikani: true,
   },
   {
@@ -72,6 +76,21 @@ export const crabData = [
   {
     id: "15",
     description: "カニカニ！横歩きで爆走しようぜ！！",
+    isTashikani: false,
+  },
+  {
+    id: "16",
+    description: "ナメないでください。チョキ以外も出せるんです。",
+    isTashikani: false,
+  },
+  {
+    id: "17",
+    description: "冷静さを欠こうとしたけど、よく考えた結果。",
+    isTashikani: true,
+  },
+  {
+    id: "18",
+    description: "いざ、尋常に勝負。",
     isTashikani: false,
   },
 ];

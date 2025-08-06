@@ -21,6 +21,9 @@ export default function CrabList() {
   };
 
   const filteredKani = sortedKani.filter((kani) => {
+    // OGP画像がXに反映されたのを確認できるまでは新規画像分を非表示にする設定
+    if (Number(kani.id) >= 16) return false;
+
     if (filter === "tashikani") return kani.isTashikani;
     if (filter === "notTashikani") return !kani.isTashikani;
     return true;
@@ -53,7 +56,7 @@ export default function CrabList() {
       {/* カニカード */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-8 mt-8">
         {filteredKani.map((kani) => (
-          <CrabCard key={kani.id} id={kani.id} description={kani.description} />
+          <CrabCard key={kani.id} crab={kani} />
         ))}
       </div>
     </div>
