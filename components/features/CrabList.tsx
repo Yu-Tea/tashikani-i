@@ -21,6 +21,9 @@ export default function CrabList() {
   };
 
   const filteredKani = sortedKani.filter((kani) => {
+    // OGP画像がXに反映されたのを確認できるまでは新規画像分を非表示にする設定
+    if (Number(kani.id) >= 16) return false;
+
     if (filter === "tashikani") return kani.isTashikani;
     if (filter === "notTashikani") return !kani.isTashikani;
     return true;
