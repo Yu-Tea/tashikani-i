@@ -90,7 +90,7 @@ export const crabData: CrabData[] = [
   },
   {
     id: "18",
-    description: "いざ、尋常に勝負。",
+    description: "我、カニにして武士なり。いざ、尋常に勝負。",
     isTashikani: false,
   },
 ];

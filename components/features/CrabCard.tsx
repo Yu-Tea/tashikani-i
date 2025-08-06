@@ -9,7 +9,7 @@ type CrabCardProps = {
 
 export const CrabCard = ({ crab }: CrabCardProps) => {
   const { id, description, isTashikani } = crab;
-  
+
   const imagePath = `/ogp/kani${id}.png`;
   const pageUrl = `https://tashikani-i.vercel.app/images/${id}`;
   const tweetText = `※ここに投稿文を書いてね🦀`;
@@ -39,7 +39,7 @@ export const CrabCard = ({ crab }: CrabCardProps) => {
       </figure>
       <div className="card-body">
         {/* NEWボタンの配置はここ！新規画像のidに合わせて数値を変更させる */}
-        {Number(id) >= 13 && <div className="badge badge-secondary">NEW</div>}
+        {Number(id) >= 16 && <div className="badge badge-secondary">NEW</div>}
         <p className="text-sm md:text-base mb-2 text-left text-gray-800">
           {description}
         </p>
