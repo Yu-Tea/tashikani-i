@@ -8,7 +8,7 @@
 
 ## 🦀技術スタック
 - フロントエンド：Next.js15
-- UI／UX：Tailsind CSS、DaisyUI
+- UI／UX：Tailwind CSS、DaisyUI
 - 画像：AI生成、Adobe Illustrator
 - デプロイ：Vercel
 
