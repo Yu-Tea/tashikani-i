@@ -19,9 +19,3 @@
 |フロントエンド|Next.js 15.4.1／TypeScript／Tailwind CSS／DaisyUI|
 |インフラ|Vercel|
 |画像作成|AI生成／Adobe Illustrator|
-
-## 🦀技術スタック
-- フロントエンド：Next.js15
-- UI／UX：Tailwind CSS、DaisyUI
-- 画像：AI生成、Adobe Illustrator
-- デプロイ：Vercel
