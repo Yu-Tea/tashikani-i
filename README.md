@@ -9,7 +9,7 @@
 ## 🦀機能紹介
 |カニを探そう|カニを投稿しよう|
 |:---:|:---:|
-|![](https://github.com/user-attachments/assets/e17eb754-8a89-4de0-b674-a6864aa8f149)|![](https://github.com/user-attachments/assets/8cd0b2b6-ca1c-4a9c-845e-f115b8d01e07)|
+|![](https://github.com/user-attachments/assets/bcbf5c66-7051-497a-9749-c3b244d3eaf1)|![](https://github.com/user-attachments/assets/8cd0b2b6-ca1c-4a9c-845e-f115b8d01e07)|
 |市場に並んだカニは「タシカニ」ワード入りかどうかの絞り込み検索が可能です。|Xに投稿した場合です。インパクトのあるカニ画像で周りと差をつけろ！|
 
 
