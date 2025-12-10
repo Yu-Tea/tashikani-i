@@ -17,5 +17,5 @@
 |カテゴリ|技術|
 |---|---|
 |フロントエンド|Next.js 15.4.1／TypeScript／Tailwind CSS／DaisyUI|
-|インフラ|Vercel|
+|デプロイ|Vercel|
 |画像作成|AI生成／Adobe Illustrator|
